@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+*::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    height: 100%;
+    background-color: #f4f4f4;
+    overflow: auto;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(202, 118, 132);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navbar Links */
+.nav-links {
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+/* Main Box Container */
+main {
+    background-color: rgb(202, 118, 132);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+    scroll-snap-type: y mandatory; /* Enables vertical snap scrolling */
+    overflow-y: scroll; /* Allows scrolling */
+}
+
+main::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Box Wrapper */
+.box-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* 5px gap between boxes */
+    height: 100%; /* Full height for scrolling */
+}
+
+/* Individual Box */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;  /* Full viewport height for each box */
+    width: 900px;
+    border: 2px solid black;
+    background-color: white;
+    scroll-snap-align: start; /* Snap to the start of each box */
+    margin: 130px 0 130px 0;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the box without distortion */
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+/* Asterisk */
+.asterisk {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.asterisk img {
+    width: 50px;
+    height: 50px;
+}
